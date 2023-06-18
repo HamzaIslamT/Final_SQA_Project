@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="E2ETest Suite">
+    <test name="E2ETest">
+        <classes>
+            <class name="org.example.testcases.E2ETest"/>
+        </classes>
+    </test>
+</suite>
