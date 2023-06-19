@@ -24,7 +24,7 @@ public class ProductPage {
 
     @Test
     public void selectProduct() throws InterruptedException {
-        WebElement firstProductLink = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[@class='a-link-normal s-no-outline'])[5]")));
+        WebElement firstProductLink = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[@class='a-link-normal s-no-outline'])[3]")));
         firstProductLink.click();
 
         // Additional product page validation if needed
