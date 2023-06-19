@@ -1,11 +1,8 @@
 package org.example.pages;
 
 import org.apache.commons.io.FileUtils;
-import org.jetbrains.annotations.NotNull;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 import java.io.File;
@@ -31,7 +28,12 @@ public class CartPage {
         WebElement goToBasketButton = driver.findElement(By.id("nav-cart"));
         goToBasketButton.click();
         TimeUnit.SECONDS.sleep(5);
-
+        WebElement addToCartTextElement = driver.findElement(By.xpath("//*[@id=\"sc-active-cart\"]/div/div/div/h1"));
+        if (addToCartTextElement.isDisplayed()) {
+            System.out.println("CartPage is displayed.");
+        } else {
+            System.out.println("CartPage is not displayed.");
+        }
         // Capture screenshot
         TakesScreenshot screenshot = (TakesScreenshot) driver;
         File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
